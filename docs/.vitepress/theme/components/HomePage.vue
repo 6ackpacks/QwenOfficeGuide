@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
+
+const href = (path: string) => withBase(path);
 const parts = [
   {
     title: "第一篇 · 使用手册",
@@ -48,9 +51,9 @@ const steps = [
         数据分析、网页交付与自动化，最后把一次成功变成团队可复用的工作系统。
       </p>
       <div class="actions">
-        <a class="primary" href="/bluebook/">开始阅读</a>
-        <a class="secondary" href="/bluebook/第一篇 使用手册：先把千问办公用起来/第 1 章 初识千问办公/">第 1 章 初识千问办公</a>
-        <a class="secondary" href="/reading-guide">阅读指南</a>
+        <a class="primary" :href="href('/bluebook/')">开始阅读</a>
+        <a class="secondary" :href="href('/bluebook/第一篇 使用手册：先把千问办公用起来/第 1 章 初识千问办公/')">第 1 章 初识千问办公</a>
+        <a class="secondary" :href="href('/reading-guide')">阅读指南</a>
       </div>
     </section>
 
@@ -60,7 +63,7 @@ const steps = [
         <div v-for="part in parts" :key="part.title" class="qwg-card">
           <h3>{{ part.title }}</h3>
           <p>{{ part.desc }}</p>
-          <a class="card-link" :href="part.link">进入本篇 →</a>
+          <a class="card-link" :href="href(part.link)">进入本篇 →</a>
         </div>
       </div>
     </section>
