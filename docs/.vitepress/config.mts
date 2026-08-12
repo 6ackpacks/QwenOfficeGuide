@@ -16,7 +16,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
-    hostname: siteUrl,
+    hostname: siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`,
   },
   markdown: {
     config: configureMermaidMarkdown,
