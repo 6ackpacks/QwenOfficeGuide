@@ -2,7 +2,9 @@
 
 **从第一个任务，到一套 AI 办公习惯**
 
-📖 在线阅读：**https://6ackpacks.github.io/QwenOfficeGuide/**
+📖 在线阅读：**https://6ackpacks.github.io/**（根域名，推荐）
+
+🪞 镜像：https://6ackpacks.github.io/QwenOfficeGuide/
 
 > 这不是官方功能说明书的改写，而是一本以真实任务为主线的实战读本。先完成登录和第一项交付，再进入钉钉协作、数据分析、网页交付和定时自动化，最后把一次成功变成团队可复用的工作系统。
 
