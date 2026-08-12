@@ -1,0 +1,24 @@
+{
+  "name": "qwen-office-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "千问办公实战蓝皮书：从第一个任务到一套 AI 办公习惯",
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs --host 127.0.0.1",
+    "docs:dev": "vitepress dev docs --host 127.0.0.1",
+    "build": "vitepress build docs",
+    "docs:build": "vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1",
+    "docs:preview": "vitepress preview docs --host 127.0.0.1",
+    "pages:deploy": "wrangler pages deploy docs/.vitepress/dist --project-name qwen-office-guide"
+  },
+  "devDependencies": {
+    "mermaid": "11.16.0",
+    "vitepress": "1.6.4",
+    "wrangler": "^4.120.0"
+  }
+}
