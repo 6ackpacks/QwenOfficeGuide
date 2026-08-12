@@ -3,8 +3,10 @@ import type { Theme } from "vitepress";
 import { nextTick } from "vue";
 
 import HomePage from "./components/HomePage.vue";
+import NotFound from "./components/NotFound.vue";
 
 import "./style.css";
+import { h } from "vue";
 
 let mermaidLoader: Promise<void> | null = null;
 
@@ -44,6 +46,11 @@ async function renderMermaid(root: ParentNode): Promise<void> {
 
 export default {
   extends: DefaultTheme,
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      "not-found": () => h(NotFound),
+    });
+  },
   enhanceApp({ app, router }) {
     app.component("HomePage", HomePage);
 
