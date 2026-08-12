@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
   head: [
-    ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: `${basePath}favicon.svg` }],
     ["meta", { name: "theme-color", content: "#1d4ed8" }],
     ["meta", { name: "author", content: "千问办公蓝皮书共创组" }],
     [
